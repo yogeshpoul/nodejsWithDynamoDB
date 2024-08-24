@@ -1,0 +1,22 @@
+DynamoDB: NOSQL(not only SQL) used to store semi-structed/unstructed data
+
+store_chat(
+    chat_id='12345',(partition key)
+    user_id='user1',(partition key)
+    timestamp='2024-08-22T12:00:00Z',
+    message='Hello, how are you?',
+    bot_response='I am good, thank you!'
+    s3key="myBucket/myFolder/myFile.pdf"(optional)
+)
+uploadDocument(
+	DocumentName="myFile.pdf"
+	pages="7"
+	FileSize="12MB"
+	UploadTime=CreatedDate
+)
+
+requires 'aws-sdk(software development kit)' 
+region: 'YOUR_REGION',
+accessKeyId: 'YOUR_ACCESS_KEY',
+secretAccessKey: 'YOUR_SECRET_KEY'
+
